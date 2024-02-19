@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LieferFood</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="logo__box">
+            <i class='bx bx-chevron-left'></i><svg class="logo" fill="#ff8001" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210 256" enable-background="new 0 0 210 256" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M174.55,144.5L174.55,144.5c-1.4-4-5-6.5-9.2-6.5H159V23c0-11.708-9.292-21-21-21H25C12.57,2,2,12.57,2,25v183 c0,11.9,10.95,22,22.75,22l114.213,0c1.207,0,2.27,0.984,2.18,2.188c-0.095,1.266-1.153,1.812-2.393,1.812h-45.5L128,254h80 L174.55,144.5z M82.05,220.2c-3.199,0-5.599-2.399-5.6-5.598c-0.001-3.045,2.557-5.602,5.602-5.602 c3.199,0.001,5.598,2.401,5.598,5.6C87.55,217.8,85.25,220.2,82.05,220.2z M144,138h-19.65c-5.3,0-9.8,4.7-9.8,10l0,0 c0,5.3,4.5,10,9.8,10h19.8v42H18V31h126V138z M39.895,65.663l6.823,53.258h22.787l6.757-53.258H48.373l-5.564-19.276l-3.047,0.861 l5.299,18.349L39.895,65.663z M79.507,96.73c0,0-0.861-7.75,10.996-7.75h18.879c11.791,0,10.996,7.75,10.996,7.75H79.507z M120.311,111.171c0,0,0.795,7.75-10.996,7.75H90.503c-11.857,0-10.996-7.75-10.996-7.75H120.311z M81.295,107.395 c-1.921,0-3.511-1.524-3.511-3.511c0-1.921,1.524-3.511,3.511-3.511h37.492c1.921,0,3.511,1.524,3.511,3.511 c0,1.921-1.59,3.511-3.511,3.511H81.295z M123.093,129.387H38.305v-6.425h84.789V129.387z"></path> </g></svg><span> LieferFood</span>
+        </div>
+        <div class="middle__box">
+            <span>Speisekarte</span>
+        </div>
+        <div class="language__box">
+            <svg class="german__flag" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M31.9 2C18.8 2 7.7 10.4 3.6 22h56.6C56.1 10.4 45 2 31.9 2z" fill="#3e4347"></path><path d="M31.9 62c13.1 0 24.2-8.3 28.3-20H3.6c4.1 11.7 15.2 20 28.3 20z" fill="#ffe62e"></path><path d="M3.6 22c-1.1 3.1-1.7 6.5-1.7 10s.6 6.9 1.7 10h56.6c1.1-3.1 1.7-6.5 1.7-10s-.6-6.9-1.7-10H3.6" fill="#ed4c5c"></path></g></svg>
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+    <section class="order">
+        <div class="order__flex">
+            <div class="dishes">
+                <div class="header__container">
+                    <img src="./images/header__image.avif" alt="Picture of Pizza">
+                    <div class="container">
+                        <div class="restaurant__image">
+                            <img src="./images/pizza-icon.jpg" alt="Restaurant Pizza">
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="container">
+                        <div class="order__info">
+                            <h2 class="order__heading">Oliver´s Pizzaeck</h2>
+                            <i class='bx bx-info-circle info__button'></i>
+                        </div>
+                        <i class='bx bxs-star star' ></i><i class='bx bxs-star star' ></i><i class='bx bxs-star star' ></i><i class='bx bxs-star star' ></i><i class='bx bxs-star star' ></i> <a href="#" class="rating__modul">8 Bewertungen</a>
+                        <p class="delivery__info"><i class='bx bx-shopping-bag' ></i><span> Min. 20.00 € </span><i class='bx bxs-circle circle' ></i> <i class='bx bx-car'></i><span> 2.00 €</span></p>
+                        <p class="restaurant__info">
+                            Ab einem Bestellwert von 40€ erhalten Sie <br>
+                            ein Getränk 1,0l gratis.
+                        </p>
+                        <div class="dish__search">
+                            <i class='bx bx-search-alt-2 search__icon' ></i>
+                            <a href="#" class="dish__search-link">Beliebt</a>
+                            <a href="#" class="dish__search-link">Pizza</a>
+                            <a href="#" class="dish__search-link">Pasta</a>
+                            <a href="#" class="dish__search-link">Getränke</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="container">
+                        <h2 class="dishes__heading marb">Beliebt ❤️</h2>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pizza Mozzarella</h3>
+                            <p class="meal__card-info">• mit Bassilikum</p>
+                            <h3 class="meal__card-price">5,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pasta Carbonara</h3>
+                            <p class="meal__card-info">• mit Rinderschinken, Ei und Parmesan</p>
+                            <h3 class="meal__card-price">10,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Bruschetta</h3>
+                            <p class="meal__card-info">• 4 Stück</p>
+                            <h3 class="meal__card-price">4,59 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+
+
+                        <div class="meal__image pizza"></div>
+                        <h2 class="dishes__heading marb">Pizza</h2>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pizza Mozzarella</h3>
+                            <p class="meal__card-info">• mit Bassilikum</p>
+                            <h3 class="meal__card-price">5,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pizza Salami</h3>
+                            <p class="meal__card-info">• mit Rindersalami</p>
+                            <h3 class="meal__card-price">6,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pizza Funghi</h3>
+                            <p class="meal__card-info">• mit Champignons</p>
+                            <h3 class="meal__card-price">6,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+
+
+                        <div class="meal__image pasta"></div>
+                        <h2 class="dishes__heading marb">Pasta</h2>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pasta Napoli</h3>
+                            <p class="meal__card-info">• mit Tomaten und Basilikum</p>
+                            <h3 class="meal__card-price">8,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pasta Carbonara</h3>
+                            <p class="meal__card-info">• mit Rinderschinken, Ei und Parmesan</p>
+                            <h3 class="meal__card-price">10,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Pasta Bolognese</h3>
+                            <p class="meal__card-info">• mit Tomaten-Hackfleischsauce</p>
+                            <h3 class="meal__card-price">9,99 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+
+
+                        <div class="meal__image getraenke"></div>
+                        <h2 class="dishes__heading marb">Getränke</h2>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Coca-Cola</h3>
+                            <p class="meal__card-info">• 0,2l Mehrweg inkl. Pfand</p>
+                            <h3 class="meal__card-price">2,00 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Fanta Exotic</h3>
+                            <p class="meal__card-info">• 0,33l Mehrweg inkl. Pfand</p>
+                            <h3 class="meal__card-price">2,25 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                        <div class="meal__card">
+                            <h3 class="meal__card-heading">Stilles Wasser</h3>
+                            <p class="meal__card-info">• 0,5l inkl. Pfand</p>
+                            <h3 class="meal__card-price">1,75 €</h3>
+                            <i class='bx bx-plus meal__card-icon' ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basket">
+                <h2 class="basket__heading">Warenkorb</h2>
+                <div class="basket__toggle">
+                    <div class="delivery active">
+                        <svg fill="#ff8001" viewBox="-0.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>bike</title> <path d="M25.8 14.32c-0.64 0-1.24 0.12-1.84 0.32l-1.52-3 2.6-3.88c0.28-0.4 0.12-1.32-0.72-1.32h-3.32c-0.48 0-0.84 0.36-0.84 0.84s0.36 0.84 0.84 0.84h1.76l-1.76 2.64h-9.68c-0.4 0-0.68 0.36-0.68 0.36v0 0 0 0l-2.56 3.76c-0.72-0.36-1.56-0.56-2.44-0.56-3.12 0-5.64 2.52-5.64 5.64s2.52 5.64 5.68 5.64c2.8 0 5.16-2.080 5.56-4.8h4.6c0.48 0 0.68-0.4 0.68-0.4v0l4.8-7.2 1.16 2.2c-1.4 1.040-2.32 2.68-2.32 4.56 0 3.12 2.52 5.64 5.64 5.64s5.64-2.52 5.64-5.64-2.56-5.64-5.64-5.64zM15.92 18.32l-3.2-5.92h7.12l-3.92 5.92zM11.24 13.2l3.16 5.92h-3.2c-0.2-1.28-0.84-2.44-1.76-3.28l1.8-2.64zM8.52 17.24c0.48 0.52 0.84 1.16 1 1.88h-2.28l1.28-1.88zM5.68 23.88c-2.16 0-3.96-1.76-3.96-3.96s1.76-3.92 3.96-3.92c0.52 0 1 0.12 1.48 0.28l-2.16 3.2c-0.36 0.44-0.040 1.28 0.68 1.28v0 0h3.84c-0.4 1.8-2 3.12-3.84 3.12zM25.8 23.88c-2.16 0-3.96-1.76-3.96-3.96 0-1.2 0.56-2.32 1.44-3.040l1.8 3.44c0.2 0.32 0.68 0.56 1.16 0.36 0.4-0.16 0.56-0.72 0.36-1.12l-1.8-3.4c0.32-0.080 0.68-0.16 1.040-0.16 2.16 0 3.96 1.76 3.96 3.96s-1.8 3.92-4 3.92zM9.8 9.4h3.080c0.48 0 0.84-0.36 0.84-0.84s-0.36-0.84-0.84-0.84h-3.080c-0.48 0-0.84 0.36-0.84 0.84-0.040 0.44 0.36 0.84 0.84 0.84z"></path> </g></svg>
+                        <p><span>Lieferung</span> <br>ab: 16:30</p>
+                    </div>
+                    <div class="collection">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 11V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V10.9673M10.4 21H13.6C15.8402 21 16.9603 21 17.816 20.564C18.5686 20.1805 19.1805 19.5686 19.564 18.816C20 17.9603 20 16.8402 20 14.6V12.2C20 11.0799 20 10.5198 19.782 10.092C19.5903 9.71569 19.2843 9.40973 18.908 9.21799C18.4802 9 17.9201 9 16.8 9H7.2C6.0799 9 5.51984 9 5.09202 9.21799C4.71569 9.40973 4.40973 9.71569 4.21799 10.092C4 10.5198 4 11.0799 4 12.2V14.6C4 16.8402 4 17.9603 4.43597 18.816C4.81947 19.5686 5.43139 20.1805 6.18404 20.564C7.03968 21 8.15979 21 10.4 21Z" stroke="#ff8001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        <p><span>Abholung</span> <br>ab: 16:00</p>
+                    </div>
+                </div>
+                <div class="basket__info">
+                    <i class='bx bx-shopping-bag basket__bag' ></i>
+                    <h2 class="basket__text">Fülle deinen Warenkorb</h2>
+                    <p class="basket__order-text">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p>
+                </div>
+                <!-- <div class="basket__items">
+                    <div class="basket__card">
+                        <div class="basket__card-flex">
+                            <div class="basket__item">
+                                <span class="basket__card-amount">1</span>
+                                <span class="basket__card-meal">Chicken Nuggets</span>
+                            </div>
+                            <div class="basket__price">
+                                <span class="basket__card-price">0,00 €</span>
+                            </div>
+                        </div>
+                        <div class="add__remove">
+                            <a href="" class="add__remove-info">Anmerkung hinzufügen</a>
+                            <div>
+                                <i id="plus" class='bx bx-plus add__remove-icon'></i>
+                                <i id="minus" class='bx bx-minus add__remove-icon' ></i>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="price">
+                    <div class="min__price">
+                        <span>Benötigter Betrag um den Mindestbestellwert zu erreichen:</span>
+                        <span id="min__order__value">0,00 €</span>
+                    </div>
+                    <div class="subtotal">
+                        <span>Zwischensumme</span>
+                        <span id="subtotal">0,00</span>
+                    </div>
+                    <div class="delivery__cost">
+                        <span>Lieferkosten</span>
+                        <span>2,00€</span>
+                    </div>
+                    <div class="total">
+                        <span>Gesamtkosten</span>
+                        <span class="total">0,00€</span>
+                    </div>
+                    <a href="" class="order__button">Bezahlen</a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <a href="#" class="footer__link">Jobs</a>
+                <a href="#" class="footer__link">Impressum</a>
+                <a href="#" class="footer__link">Bug Bounty</a>
+                <a href="#" class="footer__link">Ein Restaurant empfehlen</a>
+                <a href="#" class="footer__link">Ein Restaurant anmelden</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Handy Version Basket -->
+    <div class="small__basket">
+        <a href="#" class="small__basket-button"><i class='bx bx-shopping-bag' ></i> Warenkorb (<span>0,00</span> €)</a>
+    </div>
+
+    <!-- Popup Module -->
+    <div class="overlay"></div>
+    <div class="popup">
+        <i id="popup__close" class='bx bx-x popup__close'></i>
+        <h2 class="popup__heading">Über dieses Restaurant</h2>
+        <p class="popup__info">Hier findest du uns:</p>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.268576330291!2d8.224925777146456!3d53.14127429004719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6df6d48446e93%3A0x95110f9c899d3ee4!2sTakens%20Websolutions%20-%20Webagentur%20Oldenburg%20%7C%20Webdesign%20und%20Webentwicklung!5e0!3m2!1sde!2sde!4v1707393661192!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3 class="popup__subheading"><i class='bx bx-time' ></i> Öffnungszeiten:</h3>
+        <div class="popup__opening">
+            <div class="popup__days">
+                <span>Montag</span>
+                <span>Dienstag</span>
+                <span>Mittwoch</span>
+                <span>Donnerstag</span>
+                <span>Freitag</span>
+                <span>Samstag</span>
+                <span>Sonntag</span>
+            </div>
+            <div class="popup__hours">
+                <span>16:00 - 22:00</span>
+                <span>16:00 - 22:00</span>
+                <span>16:00 - 22:00</span>
+                <span>16:00 - 22:00</span>
+                <span>16:00 - 22:00</span>
+                <span>16:00 - 22:00</span>
+                <span>16:00 - 22:00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

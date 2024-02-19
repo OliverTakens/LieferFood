@@ -1,0 +1,646 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.basket {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 20%;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 1200px) {
+  .basket {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .basket {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    display: none;
+    z-index: 2;
+  }
+}
+
+.small__basket {
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  border-top: 1px solid rgb(191, 191, 191);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 2;
+}
+@media only screen and (max-width: 1000px) {
+  .small__basket {
+    display: flex;
+  }
+}
+
+.small__basket-button {
+  display: block;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-decoration: none;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+  background-color: #f36804;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.basket__heading {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.basket__toggle {
+  width: 90%;
+  height: 2.6rem;
+  border-radius: 2rem;
+  background-color: #f0edea;
+  margin: 1.5rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1000px) {
+  .basket__toggle {
+    justify-content: space-around;
+  }
+}
+
+.delivery {
+  display: flex;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  height: 2.2rem;
+  width: 48%;
+  margin: auto 0.2rem;
+  color: rgb(120, 120, 120);
+}
+@media only screen and (max-width: 1000px) {
+  .delivery {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.delivery span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  color: black;
+}
+
+.delivery svg {
+  width: 2rem;
+}
+
+.collection {
+  display: flex;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  height: 2.2rem;
+  width: 48%;
+  margin: auto 0.5rem auto 0.2rem;
+  color: rgb(120, 120, 120);
+}
+@media only screen and (max-width: 1000px) {
+  .collection {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.collection span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  color: black;
+}
+
+.collection svg {
+  width: 2rem;
+}
+
+.active {
+  background-color: white;
+}
+
+.active span {
+  font-weight: 600;
+}
+
+.basket__info {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.basket__bag {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.basket__text {
+  margin-bottom: 1rem;
+}
+
+.basket__order-text {
+  color: rgb(120, 120, 120);
+  line-height: 1.5rem;
+}
+
+.basket__items {
+  padding: 2rem 0;
+}
+
+.basket__card {
+  border-bottom: 0.5px solid rgb(190, 190, 190);
+  margin: 0 1rem;
+}
+
+.basket__card-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.basket__item {
+  font-weight: 600;
+}
+
+.basket__price {
+  font-weight: 400;
+  color: #242e30;
+}
+
+.add__remove {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.add__remove-icon {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #f5f3f1;
+  cursor: pointer;
+}
+
+.price {
+  padding: 1rem;
+}
+
+.min__price {
+  background-color: #FDECB3;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.subtotal, .delivery__cost, .total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.total {
+  font-weight: 600;
+}
+
+.order__button {
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+  background-color: #f36805;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 2rem;
+}
+
+.footer {
+  padding: 5rem 0;
+  background-color: #efece9;
+  width: 100%;
+}
+@media only screen and (max-width: 800px) {
+  .footer {
+    padding: 2rem 0;
+  }
+}
+
+.footer__flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 800px) {
+  .footer__flex {
+    flex-direction: column;
+  }
+}
+
+.footer__link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (max-width: 800px) {
+  .footer__link {
+    margin: 0.3rem;
+  }
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  padding: 0 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 600px) {
+  .navigation {
+    height: 4.5rem;
+  }
+}
+
+.navigation div {
+  width: 15rem;
+}
+
+.logo {
+  width: 1rem;
+}
+
+.logo__box i {
+  color: #ff8001;
+  font-size: 1.6rem;
+}
+
+.logo__box span {
+  color: #ff8001;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 800px) {
+  .logo__box span {
+    display: none;
+  }
+}
+
+.middle__box {
+  text-align: center;
+}
+
+.middle__box span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.language__box {
+  text-align: right;
+}
+
+.language__box i {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.german__flag {
+  width: 1.7rem;
+}
+@media only screen and (max-width: 700px) {
+  .german__flag {
+    display: none;
+  }
+}
+
+.popup {
+  width: 45rem;
+  background-color: white;
+  padding: 2rem 1.5rem;
+  height: auto;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .popup {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.popup__heading {
+  margin-bottom: 2rem;
+}
+
+.popup__info {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.popup__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.map {
+  width: 100%;
+  height: 30vh;
+}
+
+.popup__subheading {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.popup__opening {
+  background-color: #f5f3f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup__days, .popup__hours {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #3c4c4f;
+  line-height: 1.3rem;
+}
+
+.overlay {
+  position: fixed; /* Bleibt in Bezug auf den Viewport an der gleichen Stelle */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparentes Schwarz */
+  display: none; /* Versteckt das Overlay anfangs */
+  z-index: 1; /* Stellt sicher, dass das Overlay hinter dem Popup liegt */
+}
+
+.order {
+  position: relative;
+}
+
+.order__flex {
+  display: flex;
+  position: relative;
+}
+
+.dishes {
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media only screen and (max-width: 1200px) {
+  .dishes {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .dishes {
+    width: 100%;
+  }
+}
+
+.order__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 1rem;
+}
+
+.order__heading {
+  font-size: 1.5rem;
+}
+
+.info__button {
+  font-size: 1.6rem;
+  background-color: #f0edea;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.info__button:hover {
+  background-color: #dbd8d5;
+}
+
+.star {
+  color: #f36804;
+}
+
+.rating__modul {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  color: #3c4c4f;
+}
+.rating__modul:hover {
+  text-decoration: none;
+}
+
+.delivery__info, .restaurant__info {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #3c4c4f;
+}
+
+.circle {
+  font-size: 0.7rem;
+}
+
+.dish__search {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  white-space: nowrap;
+}
+
+.dish__search-link {
+  text-decoration: none;
+  color: #2f3435;
+  padding: 0.5rem;
+  margin-right: 1.5rem;
+  border-radius: 1rem;
+}
+.dish__search-link:hover {
+  background-color: #f0edea;
+}
+
+.search__icon {
+  font-size: 1.2rem;
+  background-color: #f0edea;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.marb {
+  margin-bottom: 1rem;
+}
+
+.menu {
+  background-color: #fcfcfc;
+  padding: 1.5rem 0;
+}
+
+.meal__card {
+  border-radius: 0.5rem;
+  border: 1px solid rgb(195, 195, 195);
+  background-color: white;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  transition: all 0.2s;
+}
+.meal__card:hover {
+  background-color: #f0edea;
+}
+
+.meal__card-heading {
+  margin-bottom: 0.5rem;
+}
+
+.meal__card-info {
+  color: #242e30;
+  margin-bottom: 0.5rem;
+}
+
+.meal__card-price {
+  font-size: 1.1rem;
+}
+
+.meal__card-icon {
+  background-color: #f0edea;
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.3rem;
+}
+
+.meal__image {
+  background-image: url(../images/pizza.avif);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 10rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.pasta {
+  background-image: url(../images/pasta.avif);
+}
+
+.getraenke {
+  background-image: url(../images/getranke.avif);
+}
+
+.dishes img {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.header__container {
+  position: relative;
+}
+
+.restaurant__image {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: white;
+  position: absolute;
+  bottom: -1rem;
+  border: 0.5px solid rgb(210, 210, 210);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.restaurant__image img {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=main.css.map */

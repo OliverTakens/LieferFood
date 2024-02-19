@@ -1,0 +1,201 @@
+@use "../variables/variables" as *;
+
+.order{
+    position: relative;
+}
+
+.order__flex{
+    display: flex;
+    position: relative;
+}
+
+.dishes{
+    width: 80%;
+    height: fit-content;
+
+    @media only screen and (max-width: 1200px) {
+        width: 75%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        width: 100%;
+    }
+}
+
+.order__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 1rem;
+}
+
+.order__heading{
+    font-size: 1.5rem;
+}
+
+.info__button{
+    font-size: 1.6rem;
+    background-color: #f0edea;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover{
+        background-color: #dbd8d5;
+    }
+}
+
+.star{
+    color: $orange-dark;
+}
+
+.rating__modul{
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    color: #3c4c4f;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.delivery__info, .restaurant__info{
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #3c4c4f;
+}
+
+.circle{
+    font-size: 0.7rem;
+}
+
+.dish__search{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin;
+    white-space: nowrap;
+}
+
+.dish__search-link{
+    text-decoration: none;
+    color: #2f3435;
+    padding: 0.5rem;
+    margin-right: 1.5rem;
+    border-radius: 1rem;
+
+    &:hover{
+        background-color: #f0edea;
+    }
+}
+
+.search__icon{
+    font-size: 1.2rem;
+    background-color: #f0edea;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+
+.shadow{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.marb{
+    margin-bottom: 1rem;
+}
+
+.menu{
+    background-color: #fcfcfc;
+    padding: 1.5rem 0;
+}
+
+.meal__card{
+    border-radius: 0.5rem;
+    border: 1px solid rgb(195, 195, 195);
+    background-color: white;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+    transition: all 0.2s;
+
+    &:hover{
+        background-color: #f0edea;
+    }
+}
+
+.meal__card-heading{
+    margin-bottom: 0.5rem;
+}
+
+.meal__card-info{
+    color: #242e30;
+    margin-bottom: 0.5rem;
+}
+
+.meal__card-price{
+    font-size: 1.1rem;
+}
+
+.meal__card-icon{
+    background-color: #f0edea;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.3rem;
+}
+
+.meal__image{
+    background-image: url(../images/pizza.avif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.pasta{
+    background-image: url(../images/pasta.avif);
+}
+
+.getraenke{
+    background-image: url(../images/getranke.avif);
+}
+
+.dishes img{
+    width: 100%;
+    height: fit-content;
+}
+
+.header__container{
+    position: relative;
+}
+
+.restaurant__image{
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: white;
+    position: absolute;
+    bottom: -1rem;
+    border: 0.5px solid rgb(210, 210, 210);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.restaurant__image img{
+    width: 3.5rem;
+    height: 3.5rem;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 0.5rem;
+}

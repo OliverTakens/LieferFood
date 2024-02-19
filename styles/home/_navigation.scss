@@ -1,0 +1,63 @@
+@use "../variables/variables" as *;
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    padding: 0 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    @media only screen and (max-width: 600px) {
+        height: 4.5rem;
+    }
+}
+
+.navigation div{
+    width: 15rem;
+}
+
+.logo{
+    width: 1rem;
+}
+
+.logo__box i{
+    color: $orange;
+    font-size: 1.6rem;
+}
+
+.logo__box span{
+    color: $orange;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    @media only screen and (max-width: 800px) {
+        display: none;
+    }
+}
+
+.middle__box{
+    text-align: center;
+}
+
+.middle__box span{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.language__box{
+    text-align: right;
+}
+
+.language__box i{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.german__flag{
+    width: 1.7rem;
+
+    @media only screen and (max-width: 700px) {
+        display: none;
+    }
+}

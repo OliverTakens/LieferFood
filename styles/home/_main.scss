@@ -1,0 +1,22 @@
+@use "../variables/variables" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+
+.container{
+    max-width: 60rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 1200px) {
+        padding: 0 1rem;
+    }
+}
+
+.d-none{
+    display: none;
+}
