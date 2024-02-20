@@ -56,19 +56,19 @@
                 <div class="menu">
                     <div class="container">
                         <h2 class="dishes__heading marb">Beliebt ❤️</h2>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pizza Mozzarella', '5.99')">
                             <h3 class="meal__card-heading">Pizza Mozzarella</h3>
                             <p class="meal__card-info">• mit Bassilikum</p>
                             <h3 class="meal__card-price">5,99 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pasta Carbonara', '10.99')">
                             <h3 class="meal__card-heading">Pasta Carbonara</h3>
                             <p class="meal__card-info">• mit Rinderschinken, Ei und Parmesan</p>
                             <h3 class="meal__card-price">10,99 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Bruschetta', '4.59')">
                             <h3 class="meal__card-heading">Bruschetta</h3>
                             <p class="meal__card-info">• 4 Stück</p>
                             <h3 class="meal__card-price">4,59 €</h3>
@@ -78,19 +78,19 @@
 
                         <div class="meal__image pizza"></div>
                         <h2 class="dishes__heading marb">Pizza</h2>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pizza Mozzarella', '5.99')">
                             <h3 class="meal__card-heading">Pizza Mozzarella</h3>
                             <p class="meal__card-info">• mit Bassilikum</p>
                             <h3 class="meal__card-price">5,99 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pizza Salami', '6.99')">
                             <h3 class="meal__card-heading">Pizza Salami</h3>
                             <p class="meal__card-info">• mit Rindersalami</p>
                             <h3 class="meal__card-price">6,99 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pizza Funghi', '6.99')">
                             <h3 class="meal__card-heading">Pizza Funghi</h3>
                             <p class="meal__card-info">• mit Champignons</p>
                             <h3 class="meal__card-price">6,99 €</h3>
@@ -100,19 +100,19 @@
 
                         <div class="meal__image pasta"></div>
                         <h2 class="dishes__heading marb">Pasta</h2>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pasta Napoli', '8.99')">
                             <h3 class="meal__card-heading">Pasta Napoli</h3>
                             <p class="meal__card-info">• mit Tomaten und Basilikum</p>
                             <h3 class="meal__card-price">8,99 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pasta Carbonara', '10.99')">
                             <h3 class="meal__card-heading">Pasta Carbonara</h3>
                             <p class="meal__card-info">• mit Rinderschinken, Ei und Parmesan</p>
                             <h3 class="meal__card-price">10,99 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Pasta Bolognese', '9.99')">
                             <h3 class="meal__card-heading">Pasta Bolognese</h3>
                             <p class="meal__card-info">• mit Tomaten-Hackfleischsauce</p>
                             <h3 class="meal__card-price">9,99 €</h3>
@@ -122,19 +122,19 @@
 
                         <div class="meal__image getraenke"></div>
                         <h2 class="dishes__heading marb">Getränke</h2>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Coca-Cola', '2.00')">
                             <h3 class="meal__card-heading">Coca-Cola</h3>
                             <p class="meal__card-info">• 0,2l Mehrweg inkl. Pfand</p>
                             <h3 class="meal__card-price">2,00 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Fanta Exotic', '2.25')">
                             <h3 class="meal__card-heading">Fanta Exotic</h3>
                             <p class="meal__card-info">• 0,33l Mehrweg inkl. Pfand</p>
                             <h3 class="meal__card-price">2,25 €</h3>
                             <i class='bx bx-plus meal__card-icon' ></i>
                         </div>
-                        <div class="meal__card">
+                        <div class="meal__card" onclick="addToBasket('Stilles Wasser', '1.75')">
                             <h3 class="meal__card-heading">Stilles Wasser</h3>
                             <p class="meal__card-info">• 0,5l inkl. Pfand</p>
                             <h3 class="meal__card-price">1,75 €</h3>
@@ -160,8 +160,8 @@
                     <h2 class="basket__text">Fülle deinen Warenkorb</h2>
                     <p class="basket__order-text">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p>
                 </div>
-                <!-- <div class="basket__items">
-                    <div class="basket__card">
+                <div class="basket__items">
+                    <!-- <div class="basket__card">
                         <div class="basket__card-flex">
                             <div class="basket__item">
                                 <span class="basket__card-amount">1</span>
@@ -178,9 +178,9 @@
                                 <i id="minus" class='bx bx-minus add__remove-icon' ></i>
                             </div>
                         </div>
-                    </div>
-                </div> -->
-                <!-- <div class="price">
+                    </div> -->
+                </div>
+                <div class="price">
                     <div class="min__price">
                         <span>Benötigter Betrag um den Mindestbestellwert zu erreichen:</span>
                         <span id="min__order__value">0,00 €</span>
@@ -191,14 +191,14 @@
                     </div>
                     <div class="delivery__cost">
                         <span>Lieferkosten</span>
-                        <span>2,00€</span>
+                        <span>2,00 €</span>
                     </div>
                     <div class="total">
                         <span>Gesamtkosten</span>
-                        <span class="total">0,00€</span>
+                        <span id="total" class="total">0,00€</span>
                     </div>
                     <a href="" class="order__button">Bezahlen</a>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
