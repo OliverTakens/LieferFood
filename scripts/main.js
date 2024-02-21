@@ -1,8 +1,5 @@
 "use strict"
 
-//  https://eatflix.niclasmichel.com/#mealsFav
-
-
 // Initialisiere Elemente
 const basketButton = document.querySelector(".small__basket-button");
 const infoButton = document.querySelector(".info__button");
@@ -11,7 +8,6 @@ const popup = document.querySelector(".popup");
 const closeButtonPopup = document.getElementById("popup__close");
 const basketPrice = document.querySelector(".price");
 const basket = document.querySelector(".basket")
-
 
 
 
@@ -56,8 +52,9 @@ function basketDeliveryToggle() {
 }
 basketDeliveryToggle();
 
-// Basket Functionality
 
+
+// Basket Functionality
 
 let products = [];
 let prices = [];
@@ -138,7 +135,11 @@ function handleAmountButtonClick(event) {
   }
 }
 
-// Passt die Produktmenge an
+/**
+ * Calculate Product Amount
+ * @param {HTMLID} buttonId 
+ * @param {Number} productIndex 
+ */
 function adjustProductAmount(buttonId, productIndex) {
   if (buttonId === "plus") {
     amounts[productIndex]++;
@@ -149,19 +150,32 @@ function adjustProductAmount(buttonId, productIndex) {
   }
 }
 
-// Aktualisiert die Anzeige der Produktmenge
+/**
+ * Update Product Amount in HTML Structure
+ * @param {HTMLDivElement} basketCard 
+ * @param {Number} productIndex 
+ */
 function updateAmountDisplay(basketCard, productIndex) {
   const amountDisplay = basketCard.querySelector('.basket__card-amount');
   amountDisplay.innerText = amounts[productIndex];
 }
 
+/**
+ * Update the Price in HTML Structure
+ * @param {HTMLDivElement} basketCard 
+ * @param {Number} productIndex 
+ */
 function updatePriceDisplay(basketCard, productIndex) {
   let newPrice = prices[productIndex] * amounts[productIndex];
   const priceDisplay = basketCard.querySelector('.basket__card-price');
   priceDisplay.innerText =  newPrice.toFixed(2) + " €";
 }
 
-// Entfernt ein Produkt, wenn seine Menge 0 erreicht
+/**
+ * Delete Product if Amount is less than 1
+ * @param {HTMLDivElement} basketCard 
+ * @param {Number} productIndex 
+ */
 function removeProduct(basketCard, productIndex) {
   basketCard.remove(); // Entfernt das Element aus dem DOM
   products.splice(productIndex, 1);
@@ -170,13 +184,18 @@ function removeProduct(basketCard, productIndex) {
   updateProductIndices(); // Aktualisiert die Indizes aller Produkte
 }
 
+/**
+ * Update the Product Index if some Elements get removed
+ */
 function updateProductIndices() {
-  // Durchlaufe alle .basket__card Elemente und aktualisiere ihre data-product-index Attribute
   document.querySelectorAll('.basket__card').forEach((card, index) => {
     card.setAttribute('data-product-index', index);
   });
 }
 
+/**
+ * Calculate the Basket Price
+ */
 function calculateBasket() {
   let subTotalAmount = 0;
   let totalAmount = 0;
@@ -188,6 +207,11 @@ function calculateBasket() {
   updatePriceSection(subTotalAmount, totalAmount)
 }
 
+/**
+ * Update the Price in HTML Structure
+ * @param {Number} subTotalAmount 
+ * @param {Number} totalAmount 
+ */
 function updatePriceSection(subTotalAmount, totalAmount) {
   const subtotal = document.getElementById("subtotal");
   const total = document.getElementById("total");
@@ -211,8 +235,6 @@ function updatePriceSection(subTotalAmount, totalAmount) {
 
 
 
-
-
 // Event-Listener
 
 /**
@@ -232,19 +254,24 @@ overlay.addEventListener("click", () => closePopup());
  */
 closeButtonPopup.addEventListener("click", () => closePopup());
 
-
+/**
+ * Take a Order and Check Min Price
+ */
 document.querySelector(".order__button").addEventListener("click", (event) => {
   event.preventDefault();
   let subtotalElement = document.getElementById("subtotal");
   let subtotalText = subtotalElement.innerText;
 
-  // Entfernen Sie alles, was nicht Teil der Zahl ist, z.B. "Summe €", und konvertieren Sie den verbleibenden String in eine Zahl
+  // Delete € sign and makes String to Number
   let subtotalNumber = parseFloat(subtotalText.replace(/[^\d,.]/g, '').replace(',', '.'));
   if(subtotalNumber >= 15){
     alert("Dies ist ein Test Programm, es wurde keine Bestellung aufgegeben!");
   }
 })
 
+/**
+ * Display the Order in Smartphone Display
+ */
 document.querySelector(".small__basket-button").addEventListener("click", () => {
   if(basket.style.display === "block"){
     basket.style.display = "none"
